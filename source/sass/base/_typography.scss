@@ -1,0 +1,36 @@
+body {
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+
+  @include respond-to(phone-and-down) {
+    line-height: 1.35;
+  }
+}
+
+.style-guide-typo {
+  font-weight: $font-weight-light;
+  color: $gray-secondary;
+}
+
+.title {
+  display: block;
+  font-size: 2.25rem;
+  font-weight: $font-weight-bold;
+
+  @include respond-to(phone-and-down) {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  &--black {
+    color: $black;
+  }
+
+  &--orange-dark {
+    color: $orange-dark;
+  }
+}
+
+.invalid-feedback {
+  position: absolute;
+}

@@ -1,0 +1,32 @@
+{
+  "sidebar": {
+    "data": [
+      {
+        "title": "User profile",
+        "icon": "user"
+      },
+      {
+        "title": "Notifications",
+        "icon": "bells",
+        "badge": "03"
+      },
+      {
+        "title": "Billings",
+        "icon": "wallet"
+      },
+      {
+        "title": "Security",
+        "icon": "lock"
+      },
+       {
+        "title": "Messages",
+        "icon": "message1",
+        "badge": "05"
+      },
+      {
+        "title": "Settings",
+        "icon": "setting"
+      }
+    ]
+  }
+}

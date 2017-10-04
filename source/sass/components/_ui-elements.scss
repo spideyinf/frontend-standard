@@ -1,0 +1,58 @@
+
+.fram-welcome {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__logo {
+    background-image: url('#{$path-to-images}fram-io-logo-text.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 30vh;
+  }
+}
+
+.avatar-placeholder {
+  background-image: url('#{$path-to-images}avatar-placeholder.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 6.75rem;
+  height: 6.75rem;
+  border: 1px solid $gray-secondary;
+  border-radius: 50%;
+}
+
+.holder-gray-600 {
+  background-color: $gray-600;
+  border-radius: .5rem;
+  flex: 0 0 100%;
+  color: $white;
+}
+
+.holder-gray-300 {
+  background-color: $gray-300;
+  border-radius: .5rem;
+  flex: 0 0 100%;
+  color: $white;
+}
+
+%fr-scroll-bar {
+  &::-webkit-scrollbar {
+    width: .38rem;
+    background-color: $gray-700;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $orange-dark;
+    border: 1px solid $gray-400;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $gray-400;
+  }
+}

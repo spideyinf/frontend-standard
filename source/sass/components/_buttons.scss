@@ -1,0 +1,45 @@
+.btn {
+  font-weight: $font-weight-light;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+
+  @include respond-to(smallphone-and-down) {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+  }
+}
+
+.btn-transparent {
+  background-color: none;
+  border: 0;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: none;
+    border: 0;
+    box-shadow: none;
+  }
+}
+
+.fr-btn-primary {
+  background: $gradient-primary;
+  color: $white;
+  border: 0;
+
+  &:hover {
+    background: $orange-primary;
+  }
+}
+
+.fr-btn-secondary {
+  background: $gradient-secondary;
+  color: $white;
+  border: 0;
+
+  &:hover {
+    background: $gray-secondary;
+  }
+}
+
+

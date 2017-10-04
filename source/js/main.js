@@ -1,5 +1,4 @@
 //=require jquery/dist/jquery.min.js
-//=require bootstrap-sass/assets/javascripts/bootstrap.js
-//=require jquery.elevatezoom.js
-//=require zoom.js
-//=require side-bar.js
+//=require popper.js/dist/umd/popper.min.js
+//=require bootstrap/dist/js/bootstrap.min.js
+//=require _toggle.js
