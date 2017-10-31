@@ -84,6 +84,9 @@ linters:
   ImportantRule:
     enabled: true
 
+  exclude:
+    - 'source/sass/layout/_messages.scss' # Override style of class .btn
+
   ImportPath:
     enabled: true
     leading_underscore: false
@@ -110,7 +113,7 @@ linters:
 
   NestingDepth:
     enabled: true
-    max_depth: 3
+    max_depth: 4
     ignore_parent_selectors: false
 
   PlaceholderInExtend:
@@ -146,7 +149,7 @@ linters:
       'ms', 's',                               # Duration
       'Hz', 'kHz',                             # Frequency
       'dpi', 'dpcm', 'dppx',                   # Resolution
-      '%']                                     # Other
+      '%', 'fr']                               # Other
     properties: {}
 
   PseudoElement:
