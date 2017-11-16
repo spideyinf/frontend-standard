@@ -18,6 +18,7 @@ $breakpoints: (
   tablet-and-desktop: '(min-width: 768px) and (max-width: 1199px)',
   phone-and-tablet: '(min-width: 768px) and (max-width: 991px)',
   smallphone-and-phone: '(min-width: 480px) and (max-width: 767px)',
+  desktop-and-large-desktop: '(min-width: 992px) and (max-width: 1350px)',
 
   phone-landscape: '(max-width: 767px) and (orientation: landscape)'
 );

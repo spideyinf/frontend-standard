@@ -24,6 +24,10 @@
         "badge": "05"
       },
       {
+        "title": "Statistics",
+        "icon": "barschart"
+      },
+      {
         "title": "Settings",
         "icon": "setting"
       }

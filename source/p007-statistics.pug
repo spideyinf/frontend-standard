@@ -1,0 +1,80 @@
+include modules/head/head
+include modules/elements/elements
+include modules/sidebar/sidebar
+include modules/header/header
+include modules/footer/footer
+
+doctype html
+html
+  head
+    +head(head.p007-statistics)
+
+  body
+    .d-flex
+      +sidebar(sidebar.data)
+
+      main.d-flex.flex-column.w-100
+        +header-dashboard('Statistics')
+
+        .trans-and-filters
+          .d-flex.align-items-center
+            h1.font-weight-bold 123
+            .d-flex.flex-column.ml-2
+              p.font-weight-bold.small transactions
+                span.font-weight-normal you have made
+              p.small in the last
+                span.font-weight-bold 30 days
+          .charts__filters
+            a(href='#' id='last-week').charts__filter Last week
+            a(href='#' id='last-30-days').charts__filter.charts__filter--active Last 30 days
+            a(href='#' id='all-time').charts__filter All time
+
+        .charts__content
+          .charts__group
+            .chart.chart__col-2
+              canvas(id='chart-0')
+            .chart.chart__col-2
+              canvas(id='chart-1')
+          .stats
+            .stats__banner
+              h4 Balance
+              .stats__info
+                .stats__info__sum.stats__info__sum--balance
+                  h4 Balance
+                  p.stats__number-primary $18K
+                .stats__info__detail.stats__info__detail--balance
+                  .info-detail
+                    .info-detail__left
+                      h5 Earnings
+                      p.stats__number $29.5K
+                    .info-detail__center
+                    .info-detail__right
+                      h5 Spendings
+                      p.stats__number $11.5K
+                  div
+                    p.stats__desc You are on top 12.5% people make up to this
+                    a(href='#').small Discover more...
+            .chart.chart__col-3
+              canvas(id='chart-2')
+          .stats
+            .stats__banner
+              h4 Return of Investment
+              .stats__info
+                .stats__info__sum.stats__info__sum--roi
+                  h4 All time ROI
+                  p.stats__number-primary $45K
+                .stats__info__detail.stats__info__detail--roi
+                  div
+                    h5 This month ROI
+                    p.stats__number $29.5K
+                  div
+                    p.stats__desc You are on top 32.5% people make profit like this
+                    a(href='#').small Discover more...
+            .chart.chart__col-3
+              canvas(id='chart-3')
+
+
+        +footer()
+
+    script(type='text/javascript', src='js/main.js')
+

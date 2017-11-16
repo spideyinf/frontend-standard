@@ -1,0 +1,257 @@
+.trans-and-filters {
+  display: flex;
+  align-items: center;
+  color: $gray-700;
+  margin: 1rem;
+
+  @include respond-to(phone-and-down) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h1 {
+    letter-spacing: .15rem;
+  }
+
+  p {
+    line-height: 1;
+  }
+}
+
+.charts {
+  overflow-x: hidden;
+
+  &__filters {
+    margin-left: auto;
+
+    @include respond-to(phone-and-down) {
+      margin: .5rem auto;
+    }
+  }
+
+
+  &__filter {
+    color: $gray-600;
+    transition: width 1s;
+    position: relative;
+    font-size: $font-size-sm;
+
+    &:not(:first-child):not(:last-child) {
+      padding: 0 .5rem;
+    }
+
+    &:hover,
+    &:active {
+      font-weight: $font-weight-bold;
+      color: $gray-600;
+    }
+
+    &--active {
+      font-weight: $font-weight-bold;
+      color: $gray-900;
+
+      &:hover,
+      &:active {
+        color: $gray-900;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  &__group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond-to(tablet-and-down) {
+      flex-direction: column;
+    }
+  }
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+
+  @include respond-to(tablet-and-down) {
+    flex-direction: column;
+  }
+
+  &__banner {
+    flex: 1 0 22rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: .5rem;
+
+    @include respond-to(tablet-and-down) {
+      flex: 0 0 100%;
+      margin: 0;
+    }
+
+    h4 {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    color: $white;
+    margin-top: .5rem;
+
+    @include respond-to(desktop-and-large-desktop) {
+      flex-direction: column;
+    }
+
+    @include respond-to(phone-and-down) {
+      flex-direction: column;
+    }
+
+    &__sum {
+      flex: 0 1 12rem;
+      text-align: center;
+      padding: 2rem 0;
+
+      @include respond-to(desktop-and-large-desktop) {
+        color: $gray-700;
+        padding: 0;
+        flex: 0 0 100%;
+
+        h4 {
+          display: none;
+        }
+      }
+
+      @include respond-to(phone-and-down) {
+        color: $black;
+        padding: 1rem 0;
+        flex: 0 0 100%;
+      }
+
+      &--balance {
+        background: $orange-primary;
+
+        @include respond-to(desktop-and-large-desktop) {
+          background: none;
+        }
+
+        @include respond-to(phone-and-down) {
+          background: none;
+        }
+      }
+
+      &--roi {
+        background: $gray-secondary;
+
+        @include respond-to(desktop-and-large-desktop) {
+          background: none;
+        }
+
+        @include respond-to(phone-and-down) {
+          background: none;
+        }
+      }
+    }
+
+    &__detail {
+      flex: 1 1 20rem;
+      position: relative;
+      padding: 1rem;
+      width: 100%;
+      margin-left: .13rem;
+
+      @include respond-to(desktop-and-large-desktop) {
+        min-width: 22rem;
+        flex: 0 0 100%;
+      }
+
+      @include respond-to(phone-and-down) {
+        flex: 0 0 100%;
+      }
+
+      a {
+        color: $white;
+      }
+
+      &--balance {
+        background: $gradient-primary-ltr;
+      }
+
+      &--roi {
+        background: $gradient-secondary-ltr;
+      }
+    }
+  }
+
+  &__number-primary {
+    font-weight: $font-weight-bold;
+    font-size: 2rem;
+    margin-top: .5rem;
+  }
+
+  &__number {
+    font-weight: $font-weight-bold;
+    font-size: 1.5rem;
+  }
+
+  &__desc {
+    font-weight: $font-weight-light;
+    font-size: .8rem;
+  }
+}
+
+.chart {
+  position: relative;
+
+  &__col-2 {
+    max-height: 18.5rem;
+    height: 30vh;
+    width: 49%;
+
+    @include respond-to(tablet-and-down) {
+      width: 100%;
+      min-height: 18rem;
+      max-height: 22rem;
+    }
+  }
+
+  &__col-3 {
+    width: 30vw;
+    min-height: 14rem;
+    max-height: 15rem;
+
+    @include respond-to(tablet-and-down) {
+      width: 100%;
+      min-height: 18rem;
+      max-height: 21rem;
+    }
+  }
+}
+
+.info-detail {
+  display: flex;
+  align-items: center;
+
+  &__left {
+    margin-right: auto;
+  }
+
+  &__center {
+    content: '';
+    height: 3.75rem;
+    border-right: 1px solid $white;
+  }
+
+  &__right {
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
